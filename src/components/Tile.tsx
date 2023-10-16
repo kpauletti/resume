@@ -14,7 +14,7 @@ export const Tile = (props: Tile) => {
     "block md:absolute relative",
     "border-2 border-black",
     "flex flex-1 items-center justify-center",
-    "text-2xl md:text-5xl font-bold text-center text-shadow-white",
+    "text-2xl md:text-5xl text-center text-shadow-white",
     "hover:bg-yellow-400",
     props.className
   );

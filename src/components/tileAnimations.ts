@@ -3,10 +3,10 @@ import { animate } from "framer-motion";
 export const CENTER_TILE_ANIMATION = {
   onMouseEnter: () => {
     animate("#CENTER", { width: "30%", height: "30%", top: "35%", left: "35%" });
-    animate("#TOP_LEFT", { height: "35%", width: "65%" });
-    animate("#BOTTOM_LEFT", { height: "65%", width: "35%" });
-    animate("#BOTTOM_RIGHT", { height: "35%", width: "65%" });
-    animate("#TOP_RIGHT", { height: "65%", width: "35%" });
+    animate("#TOP_LEFT", { height: "65%", width: "35%" });
+    animate("#BOTTOM_LEFT", { height: "35%", width: "65%" });
+    animate("#BOTTOM_RIGHT", { height: "65%", width: "35%" });
+    animate("#TOP_RIGHT", { height: "35%", width: "65%" });
   },
   onMouseLeave: () => {
     animate("#CENTER", { width: "20%", height: "20%", top: "40%", left: "40%" });

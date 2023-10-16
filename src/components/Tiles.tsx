@@ -1,5 +1,6 @@
 "use client";
 import { Yellowtail } from "next/font/google";
+import { motion as m } from "framer-motion";
 import { Tile } from "./Tile";
 import * as tileAnimation from "./tileAnimations";
 
@@ -12,13 +13,26 @@ export const Tiles = () => {
         id="CENTER"
         href="#"
         target="_self"
-        className="text-5xl md:text-3xl bg-yellow-200 md:absolute top-0 left-0 md:top-[40%] md:left-[40%] md:w-[20%] md:h-[20%] w-full hover:bg-yellow-200"
+        className="text-5xl md:text-3xl bg-yellow-200 md:absolute top-0 left-0 md:top-[40%] md:left-[40%] md:w-[20%] md:h-[20%] w-full hover:bg-yellow-200 z-50"
         whileHover={{
           fontSize: "50px",
+          backgroundColor: "transparent",
         }}
         {...tileAnimation.CENTER_TILE_ANIMATION}
       >
         <span className={yellowtail.className}>Kenneth Pauletti</span>
+        <div className="absolute inset-0">
+          <m.video
+            initial={{ opacity: 0 }}
+            whileHover={{ opacity: 0.25, transition: { duration: 0.5 } }}
+            className="w-full h-full object-cover"
+            autoPlay
+            muted
+            loop
+          >
+            <source src="./glitch.mp4" type="video/mp4" />
+          </m.video>
+        </div>
       </Tile>
       <Tile
         id="TOP_LEFT"
