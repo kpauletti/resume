@@ -23,22 +23,9 @@ const config: Config = {
       for (const color in colors) {
         if (typeof colors[color] === "object") {
           const colorShade = colors[color]["500"];
-          const colorShade2 = colors[color]["800"];
 
           neonUtilities[`.neon-text-${color}`] = {
             textShadow: `0 0 1px #fff, 0 0 2px #fff, 0 0 3px #fff, 0 0 5px ${colorShade}, 0 0 25px ${colorShade}, 0 0 50px ${colorShade}, 0 0 60px ${colorShade},  0 0 70px ${colorShade}`,
-          };
-
-          neonUtilities[`.neon-text-${color}-pulse`] = {
-            [`@keyframes neon-pulse-${color}`]: {
-              "100%": {
-                textShadow: `0 0 1px #fff, 0 0 2px #fff, 0 0 3px #fff, 0 0 5px ${colorShade}, 0 0 25px ${colorShade}, 0 0 50px ${colorShade}, 0 0 60px ${colorShade},  0 0 70px ${colorShade}`,
-              },
-              "0%": {
-                textShadow: `0 0 2px #fff, 0 0 4px #fff, 0 0 6px #fff, 0 0 10px ${colorShade2}, 0 0 50px ${colorShade2}, 0 0 100px ${colorShade2}, 0 0 120px ${colorShade2},  0 0 140px ${colorShade2}`,
-              },
-            },
-            animation: `neon-pulse-${color} 2.5s infinite alternate`,
           };
         }
       }

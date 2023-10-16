@@ -15,9 +15,7 @@ export const Tiles = () => {
         className="text-4xl bg-yellow-200 md:absolute top-[40%] left-[40%] md:w-[20%] md:h-[20%] w-full hover:bg-yellow-200"
         {...tileAnimation.CENTER_TILE_ANIMATION}
       >
-        <span className={yellowtail.className} style={{ textShadow: "1em 1em 1em #fff" }}>
-          Kenneth Pauletti
-        </span>
+        <span className={yellowtail.className}>Kenneth Pauletti</span>
       </Tile>
       <Tile
         id="TOP_LEFT"
