@@ -11,11 +11,11 @@ export const Tile = (props: Tile) => {
   const { width } = useWindowSize();
 
   const className = twMerge(
-    "block md:absolute",
+    "block md:absolute relative",
     "border-2 border-black",
     "flex flex-1 items-center justify-center",
-    "text-2xl md:text-5xl font-bold text-center",
-    "hover:bg-yellow-400 hover:animate-pulse",
+    "text-2xl md:text-5xl font-bold text-center text-shadow-white",
+    "hover:bg-yellow-400",
     props.className
   );
 
@@ -28,16 +28,10 @@ export const Tile = (props: Tile) => {
     );
   }
 
+  //add text-shadow
+
   return (
-    <m.a
-      {...props}
-      id={props.id}
-      target={props.target ?? "_blank"}
-      className={className}
-      whileHover={{
-        textShadow: "0 0 10px rgba(255,255,255,1)",
-      }}
-    >
+    <m.a {...props} id={props.id} target={props.target ?? "_blank"} className={className}>
       {props.children}
     </m.a>
   );

@@ -7,12 +7,15 @@ const yellowtail = Yellowtail({ weight: "400", subsets: ["latin"] });
 
 export const Tiles = () => {
   return (
-    <div className="absolute border-black inset-0 mt-12 border-2 flex flex-col">
+    <div className="absolute border-black inset-0 mt-12 md:m-12 border-2 flex flex-col">
       <Tile
         id="CENTER"
         href="#"
         target="_self"
-        className="text-4xl bg-yellow-200 md:absolute top-[40%] left-[40%] md:w-[20%] md:h-[20%] w-full hover:bg-yellow-200"
+        className="text-5xl md:text-3xl bg-yellow-200 md:absolute top-0 left-0 md:top-[40%] md:left-[40%] md:w-[20%] md:h-[20%] w-full hover:bg-yellow-200"
+        whileHover={{
+          fontSize: "50px",
+        }}
         {...tileAnimation.CENTER_TILE_ANIMATION}
       >
         <span className={yellowtail.className}>Kenneth Pauletti</span>

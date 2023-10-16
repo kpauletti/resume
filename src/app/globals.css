@@ -20,6 +20,14 @@
   animation: scroll 40s linear infinite;
 }
 
+.marquee_reverse {
+  animation-direction: reverse;
+}
+
+.text-shadow-white {
+  text-shadow: 0 0 10px #fff;
+}
+
 @keyframes scroll {
   from {
     transform: translateX(0);
