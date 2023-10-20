@@ -22,7 +22,7 @@ export const Tile = (props: Tile) => {
   if (width < 768) {
     //strip animations on mobile
     return (
-      <a target={props.target ?? "_blank"} href={props.href} className={className}>
+      <a id={props.id} target={props.target ?? "_blank"} href={props.href} className={className}>
         {props.children}
       </a>
     );
