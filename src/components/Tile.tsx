@@ -1,9 +1,13 @@
 "use client";
 import { motion as m, HTMLMotionProps } from "framer-motion";
-import { twMerge } from "tailwind-merge";
+import { twMerge, type ClassNameValue } from "tailwind-merge";
 import { useWindowSize } from "react-use";
+import { HTMLAttributes } from "react";
+
+type TileID = "CENTER" | "TOP_LEFT" | "TOP_RIGHT" | "BOTTOM_LEFT" | "BOTTOM_RIGHT";
 
 interface Tile extends HTMLMotionProps<"a"> {
+  id: TileID;
   children: React.ReactNode;
 }
 

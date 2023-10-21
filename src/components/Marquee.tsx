@@ -1,16 +1,5 @@
 import { twMerge } from "tailwind-merge";
 
-const marqueeItems = [
-  "TYPESCRIPT.",
-  "REACT.",
-  "AWS.",
-  "REACT NATIVE.",
-  "NODEJS.",
-  "EXPRESS.",
-  "GRAPHQL.",
-  "DOCKER.",
-];
-
 export const Marquee = ({
   items,
   location,
@@ -28,6 +17,7 @@ export const Marquee = ({
       "w-[100vh] left-[100vw] rotate-90 origin-top-left border-t-4 hidden md:block"
   );
 
+  //reverse the marquee if it's on the bottom
   const contentClassName = twMerge("marquee__content", location === "bottom" && "marquee_reverse");
 
   return (
