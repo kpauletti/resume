@@ -23,18 +23,25 @@ export const Tiles = () => {
           </div>
         </TileContent>
       </Tile>
-      <Tile id="TOP_LEFT" href="/kennethpauletti.pdf" target="_blank">
-        <TileContent>RESUME</TileContent>
-      </Tile>
-      <Tile id="TOP_RIGHT" href="https://www.linkedin.com/in/kpauletti" target="_blank">
-        <TileContent>LINKEDIN</TileContent>
-      </Tile>
-      <Tile id="BOTTOM_LEFT" href="https://www.github.com/kpauletti" target="_blank">
-        <TileContent>GITHUB</TileContent>
-      </Tile>
-      <Tile id="BOTTOM_RIGHT" href="mailto:kennethpauletti@gmail.com" target="_blank">
-        <TileContent>EMAIL</TileContent>
-      </Tile>
+      <Tile id="TOP_LEFT" href="/CV_KPauletti.docx" target="_blank" content="RESUME" />
+      <Tile
+        id="TOP_RIGHT"
+        href="https://www.linkedin.com/in/kpauletti"
+        target="_blank"
+        content="LINKEDIN"
+      />
+      <Tile
+        id="BOTTOM_LEFT"
+        href="https://www.github.com/kpauletti"
+        target="_blank"
+        content="GITHUB"
+      />
+      <Tile
+        id="BOTTOM_RIGHT"
+        href="mailto:kennethpauletti@gmail.com"
+        target="_blank"
+        content="EMAIL"
+      />
     </div>
   );
 };

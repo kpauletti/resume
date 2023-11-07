@@ -1,21 +1,27 @@
 import { twMerge } from "tailwind-merge";
 
-export const Marquee = ({
-  items,
-  location,
-}: {
+type MarqueeProps = {
   items: string[];
   location: "top" | "bottom" | "left" | "right";
-}) => {
-  const className = twMerge(
-    "border-black whitespace-nowrap overflow-hidden absolute",
-    location === "top" && "w-screen top-0 border-t-4 border-x-4 px-0 md:px-12",
-    location === "bottom" && "w-screen bottom-0 z-50 px-12 border-b-4 hidden md:block",
-    location === "left" &&
-      "w-[100vh] top-[100%] -rotate-90 origin-top-left border-t-4 hidden md:block",
-    location === "right" &&
-      "w-[100vh] left-[100vw] rotate-90 origin-top-left border-t-4 hidden md:block"
-  );
+};
+
+type MarqueeClassnames = {
+  [key in MarqueeProps["location"]]: string;
+};
+
+const BASE_CLASSNAMES = "border-black whitespace-nowrap overflow-hidden absolute";
+
+const CLASSNAMES: MarqueeClassnames = {
+  top: "w-screen top-0 border-t-4 border-x-4 px-0 md:px-12",
+  bottom: "w-screen bottom-0 z-50 px-12 border-b-4 hidden md:block",
+  left: "w-[100vh] top-[100%] -rotate-90 origin-top-left border-t-4 hidden md:block",
+  right: "w-[100vh] left-[100vw] rotate-90 origin-top-left border-t-4 hidden md:block",
+};
+
+export const Marquee = (props: MarqueeProps) => {
+  const { items, location } = props;
+
+  const className = twMerge(BASE_CLASSNAMES, CLASSNAMES[location]);
 
   //reverse the marquee if it's on the bottom
   const contentClassName = twMerge("marquee__content", location === "bottom" && "marquee_reverse");
